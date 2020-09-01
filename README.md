@@ -21,10 +21,6 @@
   <img src="https://devicons.github.io/devicon/devicon.git/icons/linux/linux-original.svg" alt="linux" width="30" height="30"/> 
   <img src="https://devicons.github.io/devicon/devicon.git/icons/docker/docker-original-wordmark.svg" alt="docker" width="30" height="30"/>
 </p>
-<p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rithviknishad&layout=compact&hide=html" alt="rithviknishad" />
-</p>
-
 <p align="center">&nbsp;
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rithviknishad&show_icons=true" alt="rithviknishad" />
 </p>
