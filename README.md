@@ -1,4 +1,3 @@
-<h2 align="center">Hi 👋, I'm Rithvik Nishad</h2>
 <h3 align="center">I bake code!</h3>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
@@ -8,8 +7,6 @@
 - 🌱 I’m currently learning **DartLang**
 
 - 👯 I’m looking to collaborate on [butterfly](https://github.com/crysalisdevs/butterfly)
-
-- 👨‍💻 All of my projects can be found [here](https://github.com/rithviknishad?tab=repositories)
 
 - 💬 Ask me about **C/C++, Dart, Flutter, bakecode**
 
