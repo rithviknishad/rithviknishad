@@ -2,8 +2,8 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
 
-- I’m currently working on [bakecode](https://github.com/crysalisdevs/bakecode)
-- Ask me about **C/C++, Dart, Flutter, bakecode**
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 <p align="center">
   <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="30" height="30"/>
