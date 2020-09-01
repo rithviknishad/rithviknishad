@@ -25,7 +25,7 @@
   <img src="https://devicons.github.io/devicon/devicon.git/icons/docker/docker-original-wordmark.svg" alt="docker" width="30" height="30"/>
 </p>
 <p>
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rithviknishad&layout=compact&hide=html" alt="rithviknishad" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rithviknishad&layout=compact&hide=html" alt="rithviknishad" />
 </p>
 
 <p align="center">&nbsp;
