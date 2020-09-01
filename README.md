@@ -3,11 +3,6 @@
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
 
 - 🔭 I’m currently working on [bakecode](https://github.com/crysalisdevs/bakecode)
-
-- 🌱 I’m currently learning **DartLang**
-
-- 👯 I’m looking to collaborate on [butterfly](https://github.com/crysalisdevs/butterfly)
-
 - 💬 Ask me about **C/C++, Dart, Flutter, bakecode**
 
 <p align="center">
