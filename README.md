@@ -1,13 +1,20 @@
-<h1 align="center">Hi 👋, I'm Rithvik Nishad</h1>
-<h3 align="center">A passionate software developer from India</h3>
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
+<h2 align="center">Hi 👋, I'm Rithvik Nishad</h2>
+<h3 align="center">I bake code!</h3>
 
-- 🔭 I’m currently working on [BakeCode](https://github.com/circuitizers/bakecode)
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
 
-- 👯 I’m looking to collaborate on [Osum Pie](https://github.com/circuitizers/osumpie)
+- 🔭 I’m currently working on [bakecode](https://github.com/crysalisdevs/bakecode)
 
-<p align="left"><img src="https://ombagoes.com/wp-content/uploads/2019/10/flutter.jpg" alt="flutter" width="40" height="40"/><img src="https://www.fluttericon.com/logo_dart_192px.svg" alt="dart" width="40" height="40"/><img src="https://konpa.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> <img src="https://konpa.github.io/devicon/devicon.git/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> <img src="https://konpa.github.io/devicon/devicon.git/icons/python/python-original-wordmark.svg" alt="python" width="40" height="40"/></p><p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=rithviknishad&show_icons=true" alt="rithviknishad" /> </p>
+- 🌱 I’m currently learning **DartLang**
 
-<p align="center">
-<a href="https://instagram.com/dart.ninja" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="dart.ninja" height="20" width="20" /></a>
-</p>
+- 👯 I’m looking to collaborate on [butterfly](https://github.com/crysalisdevs/butterfly)
+
+- 👨‍💻 All of my projects can be found [here](https://github.com/rithviknishad?tab=repositories)
+
+- 💬 Ask me about **C/C++, Dart, Flutter, bakecode**
+
+- 📫 How to reach me **rithvikn2001@gmail.com**
+
+<p align="left"><img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/c/c-original.svg" alt="c" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/> </p><p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rithviknishad&layout=compact&hide=html" alt="rithviknishad" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rithviknishad&show_icons=true" alt="rithviknishad" /></p>
