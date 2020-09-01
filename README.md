@@ -1,6 +1,6 @@
 <h3 align="center">I bake code!</h3>
 
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=rithviknishad" alt="rithviknishad" /> </p>
 
 <!--START_SECTION:waka-->
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-3-blue)
@@ -87,10 +87,5 @@ Python                   1 repos             █░░░░░░░░░░�
   <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="30" height="30"/> 
   <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="30" height="30"/> 
   <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="30" height="30"/> 
-  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="30" height="30"/> 
   <img src="https://devicons.github.io/devicon/devicon.git/icons/linux/linux-original.svg" alt="linux" width="30" height="30"/> 
-  <img src="https://devicons.github.io/devicon/devicon.git/icons/docker/docker-original-wordmark.svg" alt="docker" width="30" height="30"/>
-</p>
-<p align="center">&nbsp;
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=rithviknishad&show_icons=true" alt="rithviknishad" />
 </p>
