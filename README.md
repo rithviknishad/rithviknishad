@@ -32,17 +32,16 @@ Sunday       175 commits    █████░░░░░░░░░░░░�
 
 ```text
 💬 Programming Languages: 
-Bash                     29 mins             ██████████████████████░░░   89.73% 
-C                        3 mins              ██░░░░░░░░░░░░░░░░░░░░░░░   10.27%
+No Activity Tracked This Week
 
 🔥 Editors: 
-VS Code                  32 mins             █████████████████████████   100.0%
+No Activity Tracked This Week
 
 🐱‍💻 Projects: 
-Unknown Project          32 mins             █████████████████████████   100.0%
+No Activity Tracked This Week
 
 💻 Operating System: 
-Linux                    32 mins             █████████████████████████   100.0%
+No Activity Tracked This Week
 
 ```
 
@@ -59,7 +58,7 @@ C#                       1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 15/06/2021
+ Last Updated on 16/06/2021
 <!--END_SECTION:waka-->
 
 <p align="center">
