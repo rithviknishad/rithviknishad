@@ -1,7 +1,7 @@
 ## 🔥 Streak stats
 
 <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=rithviknishad&theme=radical&hide_border=true"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=rithviknishad&theme=vue&hide_border=true"/>
 </p>
 
 <br>
