@@ -1,7 +1,7 @@
 ### 🔥 Streak stats
 
 <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=rithviknishad&theme=vue&hide_border=true"/>
+    <img src="http://github-readme-streak-stats.herokuapp.com?user=rithviknishad&theme=synthwave&date_format=M%20j%5B%2C%20Y%5D"/>
 </p>
 
 ### 📊 Github stats
