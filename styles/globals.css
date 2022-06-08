@@ -12,3 +12,7 @@
 h1 {
   @apply text-4xl lg:text-5xl xl:text-6xl
 }
+
+body {
+  @apply bg-white dark:bg-black
+}
