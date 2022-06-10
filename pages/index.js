@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
+import { BsArrowRight } from "react-icons/bs";
+import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 
 const templateData = {
   name: "Rithvik Nishad",
@@ -22,16 +24,10 @@ const templateData = {
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <script
-          type="application/json"
-          id="my-template-data"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(templateData) }}
-        />
-      </Head>
-      <div id="root"></div>
-      <Script src="https://cdn.jsdelivr.net/npm/mytemplate.xyz@0.5.1/build/Index.js" />
+    <div className="p-10">
+      <PrimaryButton Icon={BsArrowRight}>ABOUT ME</PrimaryButton>
+      <div className="py-10"></div>
+      <SecondaryButton Icon={BsArrowRight}>SECONDARY BUTTON</SecondaryButton>
     </div>
   );
 }

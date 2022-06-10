@@ -4,10 +4,21 @@
 
 @font-face {
   font-family: 'Manrope';
-  font-family: normal;
-  font-weight: 400;
   src: url('/fonts/Manrope.woff2');
 }
+
+.btn-base {
+  @apply flex px-8 py-5 font-bold text-sm tracking-widest transition-all ease-out
+}
+
+/* .btn-primary {
+  height: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: .875rem;
+} */
 
 h1 {
   @apply text-4xl lg:text-5xl xl:text-6xl
