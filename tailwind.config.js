@@ -28,6 +28,13 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/bg-abstract.png')",
       },
+      letterSpacing: {
+        tightest: "-.075em",
+        tighter: "-.05em",
+        normal: "0",
+        wider: ".05em",
+        widest: ".5em",
+      },
     },
   },
   variants: {
