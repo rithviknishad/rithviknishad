@@ -1,4 +1,11 @@
-import { Email, GitHub, LinkedIn, Twitter, YouTube } from "./SocialButtons";
+import {
+  Email,
+  GitHub,
+  HackerRank,
+  LinkedIn,
+  Twitter,
+  YouTube,
+} from "./SocialButtons";
 
 export default function Footer(props) {
   return (
@@ -19,6 +26,7 @@ export default function Footer(props) {
             <Email mailId="mail@rithviknishad.dev" />
             <LinkedIn username="rithviknishad" />
             <YouTube channel={"UC97ytUgpyJrtGvso3SsOcJw"} />
+            <HackerRank username="rithviknishad" />
           </div>
         </section>
       </div>

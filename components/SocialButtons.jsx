@@ -1,5 +1,6 @@
 import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
+import { FaHackerrank } from "react-icons/fa";
 
 export function SocialLink({ Icon, uri, extended = false, label, ariaLabel }) {
   return (
@@ -60,6 +61,17 @@ export function Twitter({ username }) {
       uri={`https://twitter.com/${username}`}
       label={username}
       ariaLabel="Twitter"
+    />
+  );
+}
+
+export function HackerRank({ username }) {
+  return (
+    <SocialLink
+      Icon={FaHackerrank}
+      uri={`https://hackerrank.com/${username}`}
+      label={username}
+      ariaLabel="HackerRank"
     />
   );
 }
