@@ -1,6 +1,7 @@
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
 
-export function SocialLink({ Icon, uri, extended = false, label }) {
+export function SocialLink({ Icon, uri, extended = false, label, ariaLabel }) {
   return (
     <a href={uri} target="_blank" rel="noopener noreferrer">
       <Icon className="text-white hover:text-primary text-2xl cursor-pointer" />
@@ -14,6 +15,7 @@ export function GitHub({ username }) {
       Icon={BsGithub}
       uri={`https://github.com/${username}`}
       label={username}
+      ariaLabel="GitHub"
     />
   );
 }
@@ -24,6 +26,40 @@ export function LinkedIn({ username }) {
       Icon={BsLinkedin}
       uri={`https://linkedin.com/in/${username}`}
       label={username}
+      ariaLabel="LinkedIn"
+    />
+  );
+}
+
+export function Email({ mailId }) {
+  return (
+    <SocialLink
+      Icon={MdMail}
+      uri={`mailto:${mailId}`}
+      label={mailId}
+      ariaLabel="Email"
+    />
+  );
+}
+
+export function YouTube({ channel }) {
+  return (
+    <SocialLink
+      Icon={BsYoutube}
+      uri={`https://youtube.com/channel/${channel}`}
+      label="YouTube"
+      ariaLabel={"YouTube"}
+    />
+  );
+}
+
+export function Twitter({ username }) {
+  return (
+    <SocialLink
+      Icon={BsTwitter}
+      uri={`https://twitter.com/${username}`}
+      label={username}
+      ariaLabel="Twitter"
     />
   );
 }
