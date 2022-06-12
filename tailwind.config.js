@@ -25,6 +25,9 @@ module.exports = {
           900: "#040800",
         },
       },
+      backgroundImage: {
+        "hero-pattern": "url('/bg-abstract.png')",
+      },
       letterSpacing: {
         tightest: "-.075em",
         tighter: "-.05em",
