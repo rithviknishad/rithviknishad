@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn } from "./SocialButtons";
+import { Email, GitHub, LinkedIn, Twitter, YouTube } from "./SocialButtons";
 
 export default function Footer(props) {
   return (
@@ -15,7 +15,10 @@ export default function Footer(props) {
           </h2>
           <div className="flex flex-wrap md:justify-center items-center gap-8 mt-6">
             <GitHub username="rithviknishad" />
+            <Twitter username="rithviknishad" />
+            <Email mailId="mail@rithviknishad.dev" />
             <LinkedIn username="rithviknishad" />
+            <YouTube channel={"UC97ytUgpyJrtGvso3SsOcJw"} />
           </div>
         </section>
       </div>
