@@ -46,6 +46,38 @@ h1 {
   @apply text-6xl lg:text-7xl xl:text-8xl
 }
 
+h2 {
+  @apply text-5xl lg:text-6xl
+}
+
 body {
   @apply bg-white dark:bg-black
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-primary a {
+  @apply relative
+}
+
+.nav-primary a::after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 0.15s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  @apply absolute left-0 block h-0.5 translate-x-1/2 bottom-0 bg-primary transition-all
+}
+
+.nav-primary a:hover::after {
+  transform: scaleX(1);
+  content: "";
+  @apply w-full opacity-100
+}
+
+h2 small::after {
+  content: "";
+  @apply ml-2 block h-[1px] w-12 opacity-100 bg-primary
+
 }
