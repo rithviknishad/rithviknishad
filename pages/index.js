@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRef } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsGithub } from "react-icons/bs";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import NavigationBar from "../components/NavigationBar";
-import { MainProjectCard, ProjectCard } from "../components/ProjectCards";
+import { ProjectCard } from "../components/ProjectCards";
+import projects from "../lib/projects";
 
 export default function Home() {
   const homeRef = useRef(null),
@@ -65,23 +66,17 @@ export default function Home() {
       {/* Projects */}
       <section ref={projectsRef} className="bg-black py-24 px-8">
         <div className="container mx-auto max-w-screen-xl">
-          <h2 className="inline-block w-auto text-gray-100">
+          <h2 className="inline-block w-auto text-gray-100 lg:mb-3">
             <small className="text-primary tracking-widest flex items-center text-base font-bold uppercase after:bg-brand mb-3 ml-1">
               Highlight
             </small>
             Projects
           </h2>
-          <MainProjectCard
-            title="Vaidyuti - A Decentralized and Autonomous Energy ⚡ Grid Management System"
-            repository="https://github.com/Vaidyuti/vems"
-            description="A nice little project"
-            timeline="Jan 6, 2022 - now"
-          />
+          <ProjectCard highlight={true} project={projects[0]} />
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 my-12">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {projects.slice(1).map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
           </div>
         </div>
       </section>
