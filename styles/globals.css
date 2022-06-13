@@ -51,7 +51,7 @@ h2 {
 }
 
 body {
-  @apply bg-white dark:bg-black
+  @apply bg-white dark:bg-black selection:text-white selection:bg-primary 
 }
 
 html {
@@ -80,4 +80,18 @@ h2 small::after {
   content: "";
   @apply ml-2 block h-[1px] w-12 opacity-100 bg-primary
 
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#64DC0D, #64DC0D);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .4s ease-in-out;
+}
+
+.group:hover .group-hover\:link-underline {
+  background-size: 100% 1px;
+  background-position: 0 100%;
 }
