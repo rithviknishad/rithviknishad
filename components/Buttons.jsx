@@ -19,3 +19,23 @@ export function SecondaryButton({ children, Icon }) {
     </button>
   );
 }
+
+export function ProjectLinkButton({ label, icon, url, forceShrink = false }) {
+  if (label === "") forceShrink = true;
+
+  return (
+    <a
+      className="group flex text-xl gap-2 transition-all ease-out hover:text-white"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {icon}
+      {!forceShrink && (
+        <span className="uppercase hidden lg:block text-sm transition-all ease-out tracking-wider">
+          {label}
+        </span>
+      )}
+    </a>
+  );
+}
