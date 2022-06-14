@@ -1,16 +1,29 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useRef } from "react";
-import { BsArrowRight, BsGithub } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
+import { BsArrowRight, BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import NavigationBar from "../components/NavigationBar";
 import { ProjectCard } from "../components/ProjectCards";
 import projects from "../lib/projects";
+import allProjects from "../lib/projects";
 
 export default function Home() {
-  const homeRef = useRef(null),
-    aboutRef = useRef(null),
-    projectsRef = useRef(null);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const projectsToggleButtonRef = useRef(null);
+
+  const [showAllProjects, setShowAllProjects] = useState(true);
+  const projects = showAllProjects ? allProjects : allProjects.slice(0, 4);
+
+  useEffect(() => {
+    !showAllProjects &&
+      projectsToggleButtonRef.current.scrollIntoView({
+        behaviour: "smooth",
+        block: "center",
+      });
+  }, [showAllProjects]);
 
   return (
     <div id="home-root">
@@ -78,6 +91,19 @@ export default function Home() {
               <ProjectCard key={index} project={project} />
             ))}
           </div>
+          {allProjects.length > 4 && (
+            <div ref={projectsToggleButtonRef} className="flex justify-center">
+              <SecondaryButton
+                Icon={showAllProjects ? BsChevronUp : BsChevronDown}
+                bounceIconOnHover={true}
+                onClick={() => setShowAllProjects(!showAllProjects)}
+              >
+                {showAllProjects
+                  ? "SHOW LESS"
+                  : `VIEW ALL ${allProjects.length} PROJECTS`}
+              </SecondaryButton>
+            </div>
+          )}
         </div>
       </section>
 
