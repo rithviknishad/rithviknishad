@@ -1,6 +1,9 @@
-export function PrimaryButton({ children, Icon }) {
+export function PrimaryButton({ children, Icon, onClick }) {
   return (
-    <button className="btn-base group bg-primary hover:bg-primary-400 text-black">
+    <button
+      className="btn-base group bg-primary hover:bg-primary-400 text-black"
+      onClick={onClick}
+    >
       {children}
       {Icon && (
         <Icon className="ml-4 group-hover:ml-7 transition-all ease-out text-xl" />
@@ -9,12 +12,26 @@ export function PrimaryButton({ children, Icon }) {
   );
 }
 
-export function SecondaryButton({ children, Icon }) {
+export function SecondaryButton({
+  children,
+  Icon,
+  onClick,
+  bounceIconOnHover = false,
+}) {
   return (
-    <button className="btn-base group text-white hover:text-primary border border-gray-600 hover:border-primary">
+    <button
+      className="btn-base group text-white hover:text-primary border border-gray-600 hover:border-primary"
+      onClick={onClick}
+    >
       <span className="text-white">{children}</span>
       {Icon && (
-        <Icon className="ml-4 group-hover:ml-7 transition-all ease-out text-xl" />
+        <Icon
+          className={
+            bounceIconOnHover
+              ? "ml-4 group-hover:ml-7 transition-all ease-out text-xl group-hover:animate-bounce"
+              : "ml-4 group-hover:ml-7 transition-all ease-out text-xl"
+          }
+        />
       )}
     </button>
   );
