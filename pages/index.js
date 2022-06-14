@@ -128,6 +128,21 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row">
+          <h2 className="text-gray-900 dark:text-gray-100 w-full lg:w-1/2">
+            <small className="text-primary tracking-widest flex items-center text-base font-bold uppercase mb-3 ml-1">
+              Things I got my
+            </small>
+            hands on
+          </h2>
+          <div className="w-full mt-6 lg:mt-0 lg:w-1/2 mb-10 lg:text-lg py-4">
+            <ul className="flex flex-col gap-8">
+              {abouts.map((about, index) => (
+                <AboutCard key={index} about={about} />
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   );
