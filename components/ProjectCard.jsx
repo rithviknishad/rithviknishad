@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { ProjectLinkButton } from "./Buttons";
 
-export function ProjectCard({ project, highlight = false }) {
+export default function ProjectCard({ project, highlight = false }) {
   const { title, image, link, timeline, description, repository, otherLinks } =
     project;
 
