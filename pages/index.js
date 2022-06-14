@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { BsArrowRight, BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import NavigationBar from "../components/NavigationBar";
-import { ProjectCard } from "../components/ProjectCards";
-import projects from "../lib/projects";
+import ProjectCard from "../components/ProjectCard";
 import allProjects from "../lib/projects";
+import abouts from "../lib/abouts";
+import AboutCard from "../components/AboutCard";
 
 export default function Home() {
   const homeRef = useRef(null);
@@ -108,7 +109,26 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section ref={aboutRef} className="w-full h-screen bg-primary"></section>
+      <section
+        ref={aboutRef}
+        className="bg-neutral-100 dark:bg-[#23272B] py-24 px-8"
+      >
+        <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row">
+          <h2 className="text-gray-900 dark:text-gray-100 w-full lg:w-1/2">
+            <small className="text-primary tracking-widest flex items-center text-base font-bold uppercase mb-3 ml-1">
+              About
+            </small>
+            Myself
+          </h2>
+          <div className="w-full mt-6 lg:mt-0 lg:w-1/2 mb-10 lg:text-lg py-4">
+            <ul className="flex flex-col gap-8">
+              {abouts.map((about, index) => (
+                <AboutCard key={index} about={about} />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
