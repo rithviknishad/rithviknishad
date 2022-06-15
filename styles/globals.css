@@ -34,6 +34,18 @@
   }
  }
 
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64DC0D;
+}
+
 .btn-base {
   @apply flex px-8 py-5 font-bold text-sm tracking-widest transition-all ease-out items-center
 }
@@ -56,6 +68,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #64DC0D transparent;
 }
 
 .nav-primary a {
