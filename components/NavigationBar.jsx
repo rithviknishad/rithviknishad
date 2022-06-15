@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function NavigationBar({ locations }) {
@@ -16,32 +15,34 @@ export default function NavigationBar({ locations }) {
   });
 
   return (
-    <nav
-      className={
-        shrinked
-          ? "navbar nav-primary bg-black border-b border-neutral-700 py-4"
-          : "navbar nav-primary border-black border-b-0 py-8"
-      }
-    >
-      <div></div>
-      <div className="flex items-center transition-all">
-        <div className="hidden md:block">
-          {locations.map((location) => (
-            <a
-              key={location.label}
-              className="p-1 text-base font-bold text-gray-900 dark:text-gray-100 sm:p-4 tracking-wider cursor-pointer"
-              onClick={() =>
-                location.ref.current.scrollIntoView({
-                  behaviour: "smooth",
-                  block: "start",
-                })
-              }
-            >
-              {location.label}
-            </a>
-          ))}
+    <div className="hidden md:block">
+      <nav
+        className={
+          shrinked
+            ? "navbar nav-primary bg-black border-b border-neutral-700 py-4"
+            : "navbar nav-primary border-black border-b-0 py-8"
+        }
+      >
+        <div></div>
+        <div className="flex items-center transition-all 2xl:pr-52">
+          <div className="hidden md:block">
+            {locations.map((location) => (
+              <a
+                key={location.label}
+                className="p-1 text-base font-bold text-gray-900 dark:text-gray-100 sm:p-4 tracking-wider cursor-pointer"
+                onClick={() =>
+                  location.ref.current.scrollIntoView({
+                    behaviour: "smooth",
+                    block: "start",
+                  })
+                }
+              >
+                {location.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
