@@ -24,12 +24,12 @@ export default function NavigationBar({ locations }) {
         }
       >
         <div></div>
-        <div className="flex items-center transition-all 2xl:pr-52">
-          <div className="hidden md:block">
+        <div className="hidden md:block">
+          <div className="flex items-center transition-all 2xl:pr-52">
             {locations.map((location) => (
-              <a
+              <div
                 key={location.label}
-                className="p-1 text-base font-bold text-gray-900 dark:text-gray-100 sm:p-4 tracking-wider cursor-pointer"
+                className="sectionlink p-1 text-base font-bold text-gray-900 dark:text-gray-100 sm:p-4 tracking-wider cursor-pointer"
                 onClick={() =>
                   location.ref.current.scrollIntoView({
                     behaviour: "smooth",
@@ -38,7 +38,7 @@ export default function NavigationBar({ locations }) {
                 }
               >
                 {location.label}
-              </a>
+              </div>
             ))}
           </div>
         </div>

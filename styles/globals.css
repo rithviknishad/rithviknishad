@@ -71,11 +71,11 @@ html {
   scrollbar-color: #64DC0D transparent;
 }
 
-.nav-primary a {
+.nav-primary .sectionlink {
   @apply relative
 }
 
-.nav-primary a::after {
+.nav-primary .sectionlink::after {
   content: "";
   transform: scaleX(0);
   transition: transform 0.15s;
@@ -83,7 +83,7 @@ html {
   @apply absolute left-0 block h-0.5 translate-x-1/2 bottom-0 bg-primary transition-all
 }
 
-.nav-primary a:hover::after {
+.nav-primary .sectionlink:hover::after {
   transform: scaleX(1);
   content: "";
   @apply w-full opacity-100
