@@ -57,15 +57,18 @@ export default function ProjectCard({ project, highlight = false }) {
         <p className="mt-4 leading-relaxed text-gray-600 dark:text-gray-300">
           {description}
         </p>
-        <div className="mt-4 flex flex-wrap gap-3 text-gray-600 dark:text-gray-400 cursor-default">
+        <div className="mt-4 flex flex-wrap gap-2 text-gray-600 dark:text-gray-400 cursor-default">
           {tags.map((tag, index) => (
-            <div
+            <a
               key={index}
-              className="flex flex-row items-center gap-1 hover:dark:text-primary"
+              href={tag.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row items-center gap-1 hover:dark:text-zinc-900 bg-zinc-900 hover:bg-white py-1 px-2 rounded-full transition-all ease-in-out"
             >
               {tag.icon}
               <span className="text-xs tracking-wide">{tag.name}</span>
-            </div>
+            </a>
           ))}
         </div>
       </div>
