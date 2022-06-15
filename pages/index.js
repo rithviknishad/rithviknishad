@@ -25,16 +25,16 @@ export default function Home() {
   const projectsRef = useRef(null);
   const projectsToggleButtonRef = useRef(null);
 
-  const [showAllProjects, setShowAllProjects] = useState(true);
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const projects = showAllProjects ? allProjects : allProjects.slice(0, 4);
 
-  useEffect(() => {
-    !showAllProjects &&
-      projectsToggleButtonRef.current.scrollIntoView({
-        behaviour: "smooth",
-        block: "center",
-      });
-  }, [showAllProjects]);
+  // useEffect(() => {
+  //   !showAllProjects &&
+  //     projectsToggleButtonRef.current.scrollIntoView({
+  //       behaviour: "smooth",
+  //       block: "center",
+  //     });
+  // }, [showAllProjects]);
 
   return (
     <div id="home-root">
@@ -81,8 +81,28 @@ export default function Home() {
               goods.`}
             </p>
             <div className="flex flex-wrap items-start gap-4 pb-24 lg:pb-0 mt-8">
-              <PrimaryButton Icon={BsArrowRight}>PROJECTS</PrimaryButton>
-              <SecondaryButton Icon={BsArrowRight}>KNOW ME</SecondaryButton>
+              <PrimaryButton
+                Icon={BsArrowRight}
+                onClick={() =>
+                  projectsRef.current.scrollIntoView({
+                    behaviour: "smooth",
+                    block: "start",
+                  })
+                }
+              >
+                PROJECTS
+              </PrimaryButton>
+              <SecondaryButton
+                Icon={BsArrowRight}
+                onClick={() =>
+                  knowMeRef.current.scrollIntoView({
+                    behaviour: "smooth",
+                    block: "start",
+                  })
+                }
+              >
+                KNOW ME
+              </SecondaryButton>
             </div>
           </div>
         </div>
