@@ -3,8 +3,16 @@ import { BsGithub } from "react-icons/bs";
 import { ProjectLinkButton } from "./Buttons";
 
 export default function ProjectCard({ project, highlight = false }) {
-  const { title, image, link, timeline, description, repository, otherLinks } =
-    project;
+  const {
+    title,
+    image,
+    link,
+    timeline,
+    description,
+    repository,
+    otherLinks,
+    tags,
+  } = project;
 
   const gitLink = {
     label: highlight ? "Repository" : "",
@@ -49,6 +57,17 @@ export default function ProjectCard({ project, highlight = false }) {
         <p className="mt-4 leading-relaxed text-gray-600 dark:text-gray-300">
           {description}
         </p>
+        <div className="mt-4 flex flex-wrap gap-3 text-gray-600 dark:text-gray-400 cursor-default">
+          {tags.map((tag, index) => (
+            <div
+              key={index}
+              className="flex flex-row items-center gap-1 hover:dark:text-primary"
+            >
+              {tag.icon}
+              <span className="text-xs tracking-wide">{tag.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
