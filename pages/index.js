@@ -65,6 +65,7 @@ export default function Home() {
                 layout="fill"
                 objectFit="cover"
                 alt="Photo of Rithvik Nishad"
+                priority={true}
               />
             </div>
           </div>
