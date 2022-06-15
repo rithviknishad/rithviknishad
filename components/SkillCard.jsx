@@ -16,11 +16,13 @@ export default function SkillCard({ category, skills }) {
   }
 
   return (
-    <li className="group flex items-start hover:dark:text-white lg:p-4 rounded-lg transition-all ease-out text-gray-800 dark:text-gray-400 text-base hover:bg-opacity-75 hover:bg-primary-900">
+    <div className="group flex items-start hover:dark:text-white lg:p-4 rounded-lg transition-all ease-out text-gray-800 dark:text-gray-400 text-base hover:bg-opacity-75 hover:bg-primary-900">
       {/* <div className="min-w-fit text-2xl mt-5">{icon}</div> */}
-      <div className="flex flex-col pl-3 gap-1">
+      <div className="flex flex-col gap-1">
         <div className="flex justify-between items-center">
-          <span className="font-bold tracking-wide lg:text-xl">{category}</span>
+          <span className="font-bold tracking-wider lg:text-xl">
+            {category}
+          </span>
         </div>
         <span className="uppercase text-xs lg:text-sm tracking-wider">
           {/* {subtitle} */}
@@ -29,6 +31,6 @@ export default function SkillCard({ category, skills }) {
           {renderedSkills}
         </div>
       </div>
-    </li>
+    </div>
   );
 }
