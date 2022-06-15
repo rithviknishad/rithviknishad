@@ -29,7 +29,7 @@ export default function ProjectCard({ project, highlight = false }) {
       }
     >
       <div className="w-full relative overflow-hidden rounded-3xl">
-        <Image src={image} alt={title} />
+        <Image src={image} alt={title} priority={true} />
       </div>
       <div className={highlight ? "w-full mt-4 lg:mt-0" : "w-full mt-4"}>
         <a

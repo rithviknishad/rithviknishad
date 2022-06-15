@@ -42,45 +42,6 @@ export default function Home() {
         <title>
           {"Rithvik Nishad – software developer, electrical engineer, creator"}
         </title>
-        <link rel="preload" href="/images/project-bg/Arike.png" as="image" />
-        <link
-          rel="preload"
-          href="/images/project-bg/BuckBoostConverter.jpg"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/project-bg/Coronasafe.jpg"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/project-bg/IoTBasedPS.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/project-bg/MartialArts.png"
-          as="image"
-        />
-        <link rel="preload" href="/images/project-bg/osumpi.png" as="image" />
-        <link
-          rel="preload"
-          href="/images/project-bg/SmartJunction.jpg"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/project-bg/Standalone3DPosSensor.png"
-          as="image"
-        />
-        <link rel="preload" href="/images/project-bg/Swiftly.png" as="image" />
-        <link rel="preload" href="/images/project-bg/Vaidyuti.png" as="image" />
-        <link
-          rel="preload"
-          href="/images/project-bg/VITCCElectricalIssues.png"
-          as="image"
-        />
       </Head>
       <NavigationBar
         locations={[
