@@ -4,15 +4,107 @@
 
 @font-face {
   font-family: 'Manrope';
-  font-family: normal;
-  font-weight: 400;
   src: url('/fonts/Manrope.woff2');
 }
 
+.scales {
+  -webkit-animation:scales 100s linear 0s infinite;
+  animation:scales 100s linear 0s infinite
+ }
+ @-webkit-keyframes scales {
+  0% {
+   background-position-x:0
+  }
+  50% {
+   background-position-x:-200%
+  }
+  to {
+   background-position-x:0
+  }
+ }
+ @keyframes scales {
+  0% {
+   background-position-x:0
+  }
+  50% {
+   background-position-x:-200%
+  }
+  to {
+   background-position-x:0
+  }
+ }
+
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64DC0D;
+}
+
+.btn-base {
+  @apply flex px-8 py-5 font-bold text-sm tracking-widest transition-all ease-out items-center
+}
+
+.navbar {
+  @apply flex items-center justify-between w-full px-8 mx-auto my-0 fixed z-30 transition-all
+}
+
 h1 {
-  @apply text-4xl lg:text-5xl xl:text-6xl
+  @apply text-6xl lg:text-7xl xl:text-8xl
+}
+
+h2 {
+  @apply text-5xl lg:text-6xl
 }
 
 body {
-  @apply bg-white dark:bg-black
+  @apply bg-white dark:bg-black selection:text-white selection:bg-primary 
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #64DC0D transparent;
+}
+
+.nav-primary a {
+  @apply relative
+}
+
+.nav-primary a::after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 0.15s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  @apply absolute left-0 block h-0.5 translate-x-1/2 bottom-0 bg-primary transition-all
+}
+
+.nav-primary a:hover::after {
+  transform: scaleX(1);
+  content: "";
+  @apply w-full opacity-100
+}
+
+h2 small::after {
+  content: "";
+  @apply ml-2 block h-[1px] w-12 opacity-100 bg-primary
+
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#64DC0D, #64DC0D);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .4s ease-in-out;
+}
+
+.group:hover .group-hover\:link-underline {
+  background-size: 100% 1px;
+  background-position: 0 100%;
 }
