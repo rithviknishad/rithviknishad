@@ -20,6 +20,7 @@ import {
 
 export default function Home() {
   const homeRef = useRef(null);
+  const knowMeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const projectsToggleButtonRef = useRef(null);
@@ -46,6 +47,7 @@ export default function Home() {
         locations={[
           { label: "Home", ref: homeRef },
           { label: "Projects", ref: projectsRef },
+          { label: "Know Me", ref: knowMeRef },
           { label: "About", ref: aboutRef },
         ]}
       />
@@ -116,33 +118,10 @@ export default function Home() {
           )}
         </div>
       </section>
-
-      {/* About */}
-      <section
-        ref={aboutRef}
-        className="bg-neutral-100 dark:bg-[#232326] pt-24 pb-16 px-8"
-      >
-        <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row">
-          <h2 className="text-white w-full lg:w-1/2">
-            <small className="text-primary tracking-widest flex items-center text-base font-bold uppercase mb-3 ml-1">
-              About
-            </small>
-            Myself
-          </h2>
-          <div className="w-full mt-6 lg:mt-0 lg:w-1/2 mb-10 lg:text-lg py-4">
-            <ul className="flex flex-col gap-8">
-              {abouts.map((about, index) => (
-                <AboutCard key={index} about={about} />
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Skills */}
       <section
-        ref={aboutRef}
-        className="bg-neutral-100 dark:bg-[#232326] pb-24 px-8"
+        ref={knowMeRef}
+        className="bg-neutral-100 dark:bg-[#232326] py-24 px-8"
       >
         <div className="container mx-auto max-w-screen-xl grid grid-cols-1 lg:grid-cols-2 gap-y-16">
           <h2 className="text-gray-900 dark:text-gray-100 w-full lg:w-1/2">
@@ -159,6 +138,27 @@ export default function Home() {
           <SkillCard category="Platforms" skills={platforms} />
           <SkillCard category="Databases" skills={db} />
           <SkillCard category="Other Tools" skills={otherTools} />
+        </div>
+      </section>
+      {/* About */}
+      <section
+        ref={aboutRef}
+        className="bg-neutral-100 dark:bg-[#232326] py-24 px-8"
+      >
+        <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row">
+          <h2 className="text-white w-full lg:w-1/2">
+            <small className="text-primary tracking-widest flex items-center text-base font-bold uppercase mb-3 ml-1">
+              About
+            </small>
+            Myself
+          </h2>
+          <div className="w-full mt-6 lg:mt-0 lg:w-1/2 mb-10 lg:text-lg py-4">
+            <ul className="flex flex-col gap-12 lg:gap-8">
+              {abouts.map((about, index) => (
+                <AboutCard key={index} about={about} />
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
     </div>
