@@ -41,12 +41,19 @@ export default function ProjectCard({ project, highlight = false }) {
           {title}
         </a>
         <div className="flex justify-start gap-6 my-3 text-sm text-gray-500 dark:text-gray-400">
-          <div className="text-base">{timeline}</div>
-          <div className="flex gap-4 items-center">
+          <span className="relative inline-flex">
+            <span className="text-base">{timeline}</span>
+            {timeline.includes("now") && (
+              <span className="flex absolute h-3 w-3 top-1/2 right-0 -mt-1.5 -mr-5 items-center justify-center">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+              </span>
+            )}
+          </span>
+          <div className="flex gap-4 items-center ml-1.5">
             {[gitLink, ...otherLinks].map((link, index) => (
               <ProjectLinkButton
                 key={index}
-                // forceShrink={!highlight}
                 label={link.label}
                 icon={link.icon}
                 url={link.url}
