@@ -7,7 +7,9 @@ import Splash from "../components/Splash";
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setLoading] = useState(true);
-  useEffect(() => setLoading(false), []);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
 
   if (isLoading) {
     return <Splash />;
