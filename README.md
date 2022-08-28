@@ -1,4 +1,8 @@
-![wakatime][total flight hours]
+✈️️ **Total Flight hours**
+
+🧑‍✈️️ ![wakatime][total flight hours]
+
+------------------------------------------
 
 ![gh stats]
 ![streak status]
