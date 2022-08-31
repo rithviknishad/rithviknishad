@@ -1,6 +1,6 @@
-✈️️ **Total Flight hours**
+✈️️ **Total Flight hours** 🧑‍✈️️
 
-🧑‍✈️️ ![wakatime][total flight hours]
+🚀️ ![wakatime][total flight hours]
 
 ------------------------------------------
 
