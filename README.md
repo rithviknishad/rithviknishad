@@ -4,7 +4,10 @@
 
 ------------------------------------------
 
-![gh stats]
+![](https://raw.githubusercontent.com/rithviknishad/github-stats/master/generated/overview.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/rithviknishad/github-stats/master/generated/overview.svg#gh-light-mode-only)
+
+
 ![streak status]
 ![profile summary]
 ![flight hours]
