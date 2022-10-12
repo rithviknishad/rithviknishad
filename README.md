@@ -1,8 +1,7 @@
+[![@rithviknishad's Holopin board](https://holopin.me/rithviknishad)](https://holopin.io/@rithviknishad)
+
 ✈️️ **Total Flight hours** 🧑‍✈️️
-
 🚀️ ![wakatime][total flight hours]
-
-------------------------------------------
 
 ![](https://raw.githubusercontent.com/rithviknishad/github-stats/master/generated/overview.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/rithviknishad/github-stats/master/generated/overview.svg#gh-light-mode-only)
