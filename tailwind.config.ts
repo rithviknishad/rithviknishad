@@ -1,8 +1,10 @@
-module.exports = {
-  darkMode: "class",
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -16,22 +18,23 @@ module.exports = {
         },
       },
       fontFamily: {
-        manrope: ["Manrope", "sans-serif"],
-        sans: ["Manrope", "sans-serif"],
+        sans: ["var(--font-inter)"],
+        manrope: ["var(--font-manrope)"],
       },
       colors: {
         primary: {
-          DEFAULT: "#64DC0D",
-          50: "#CAFAA7",
-          100: "#BEF994",
-          200: "#A7F66D",
-          300: "#8FF447",
-          400: "#78F220",
-          500: "#64DC0D",
-          600: "#4CA70A",
-          700: "#347207",
-          800: "#1C3D04",
-          900: "#040800",
+          DEFAULT: "#EEF35F",
+          50: "#FFFFFF",
+          100: "#FEFEF7",
+          200: "#FAFCD1",
+          300: "#F6F9AB",
+          400: "#F2F685",
+          500: "#EEF35F",
+          600: "#E8EF2B",
+          700: "#CBD210",
+          800: "#999E0C",
+          900: "#666A08",
+          950: "#4D5006",
         },
       },
       backgroundImage: {
@@ -46,13 +49,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      fontFamily: ["hover", "focus"],
-    },
-  },
   plugins: [],
-  corePlugins: {
-    fontFamily: true,
-  },
 };
+export default config;

@@ -7,66 +7,60 @@ import {
 } from "react-icons/io";
 import { SiGitbook } from "react-icons/si";
 
-import ArikeBG from "../public/images/project-bg/Arike.png";
-import BuckBoostBG from "../public/images/project-bg/BuckBoostConverter.jpg";
-import CoronasafeBG from "../public/images/project-bg/Coronasafe.jpg";
-import IoTBasedPSBG from "../public/images/project-bg/IoTBasedPS.png";
-import MartialArtsBG from "../public/images/project-bg/MartialArts.png";
-import OsumPiBG from "../public/images/project-bg/osumpi.png";
-import SmartJunctionBG from "../public/images/project-bg/SmartJunction.jpg";
-import Standalone3DPositionSensorBG from "../public/images/project-bg/Standalone3DPosSensor.png";
-import SwiftlyBG from "../public/images/project-bg/Swiftly.png";
-import VaidyutiBG from "../public/images/project-bg/Vaidyuti.png";
-import VITCCElectricalIssuesBG from "../public/images/project-bg/VITCCElectricalIssues.png";
-import {
-  platforms,
-  db,
-  iot,
-  frameworks,
-  langs,
-  otherTools,
-  api,
-} from "./skills";
+import ArikeBG from "@public/images/project-bg/Arike.png";
+import BuckBoostBG from "@public/images/project-bg/BuckBoostConverter.jpg";
+import CoronasafeBG from "@public/images/project-bg/Coronasafe.jpg";
+import IoTBasedPSBG from "@public/images/project-bg/IoTBasedPS.png";
+import MartialArtsBG from "@public/images/project-bg/MartialArts.png";
+import OsumPiBG from "@public/images/project-bg/osumpi.png";
+import SmartJunctionBG from "@public/images/project-bg/SmartJunction.jpg";
+import Standalone3DPositionSensorBG from "@public/images/project-bg/Standalone3DPosSensor.png";
+import SwiftlyBG from "@public/images/project-bg/Swiftly.png";
+import VaidyutiBG from "@public/images/project-bg/Vaidyuti.png";
+import VITCCElectricalIssuesBG from "@public/images/project-bg/VITCCElectricalIssues.png";
+import Skills from "@/constants/skills";
 
-const projects = [
-  // Vaidyuti
+const Projects = [
   {
     title:
-      "Vaidyuti - A Decentralized and Autonomous Energy ⚡ Grid Management System",
+      "Vaidyuti - Accelerating adoption of decentralised and renewable energy",
     image: VaidyutiBG,
-    link: "https://vaidyuti.vercel.app",
+    link: "https://vaidyuti.in",
     timeline: "Jan `22 - now",
     description:
-      "Our goal is to accelerate distributed generation and microgrids while ensuring maximum uptime and reliability. Vaidyuti protocol is being built to handle peer-to-peer energy and cash flow transactions between prosumers, in the most efficient and optimal way.",
-    repository: "https://github.com/Vaidyuti/vems/",
+      "Our goal is to accelerate the adoption of renewable energy sources and decentralized energy generation while ensuring maximum uptime and reliability.",
+    repository: "https://github.com/vaidyuti/",
     otherLinks: [
       {
-        label: "Staging API",
+        label: "Deployment",
         icon: <IoIosRocket />,
-        url: "https://vaidyuti-vems.herokuapp.com/redoc/",
+        url: "https://get.vaidyuti.in/",
       },
       {
-        label: "Docs",
+        label: "API",
+        icon: <IoIosRocket />,
+        url: "https://api.vaidyuti.in/",
+      },
+      {
+        label: "API Docs",
         icon: <SiGitbook />,
-        url: "https://rithviknishad.gitbook.io/vaidyuti-system-design-documentation/",
+        url: "https://api.vaidyuti.in/swagger/",
       },
     ],
     tags: [
-      db.InfluxDB,
-      otherTools.Telegraf,
-      otherTools.EMQX,
-      frameworks.DjangoREST,
-      api.solcast,
-      iot.ESP32,
-      db.PostgreSQL,
-      db.Redis,
-      platforms.Heroku,
-      platforms.Cloudflare,
-      otherTools.Docker,
-      otherTools.Grafana,
+      Skills.frameworks.Django,
+      Skills.iot.ESP32,
+      Skills.tools.EMQX,
+      Skills.databases.InfluxDB,
+      Skills.databases.PostgreSQL,
+      Skills.databases.PlanetScale,
+      Skills.tools.Telegraf,
+      Skills.databases.Redis,
+      Skills.api.solcast,
+      Skills.tools.Docker,
     ],
   },
-  // Coronasafe Care
+  // CARE
   {
     title:
       "CARE - Our Goal is to defend the Healthcare system from overloading beyond capacity.",
@@ -74,20 +68,21 @@ const projects = [
     link: "https://github.com/coronasafe/",
     timeline: "May `22 - now",
     description:
-      "Care is an integrated tele-triage+bed allocation+patient shifting tool for implementing a decentralised Covid19 management strategy.",
+      "Care is a Digital Public Good enabling TeleICU & Decentralised Administration of Healthcare Capacity across States.",
     repository: "https://github.com/coronasafe/care_fe",
     otherLinks: [
       {
-        label: "Coronasafe Network",
+        label: "Open Healthcare Network",
         icon: <CgOrganisation />,
-        url: "https://coronasafe.network/",
+        url: "https://ohc.network/",
       },
     ],
     tags: [
-      frameworks.React,
-      frameworks.Tailwind,
-      langs.Typescript,
-      platforms.Netlify,
+      Skills.frameworks.Django,
+      Skills.frameworks.React,
+      Skills.frameworks.Tailwind,
+      Skills.languages.Typescript,
+      Skills.languages.Python,
     ],
   },
   // IoT based Push-Pull converter
@@ -107,12 +102,12 @@ const projects = [
       },
     ],
     tags: [
-      otherTools.Simulink,
-      otherTools.VerneMQ,
-      otherTools.NodeRED,
-      iot.MQTT,
-      langs.MATLAB,
-      langs.Dart,
+      Skills.tools.Simulink,
+      Skills.tools.EMQX,
+      Skills.tools.NodeRED,
+      Skills.iot.MQTT,
+      Skills.languages.MATLAB,
+      Skills.languages.Dart,
     ],
   },
   // OsumPi
@@ -126,12 +121,10 @@ const projects = [
     repository: "https://github.com/osumpi",
     otherLinks: [],
     tags: [
-      langs.Dart,
-      frameworks.Flutter,
-      iot.MQTT,
-      otherTools.EMQX,
-      otherTools.VerneMQ,
-      otherTools.Mosquitto,
+      Skills.languages.Dart,
+      Skills.frameworks.Flutter,
+      Skills.iot.MQTT,
+      Skills.tools.EMQX,
     ],
   },
   // Swiftly
@@ -151,13 +144,11 @@ const projects = [
       },
     ],
     tags: [
-      frameworks.React,
-      frameworks.Tailwind,
-      langs.Typescript,
-      frameworks.Django,
-      db.PostgreSQL,
-      iot.HTTP,
-      platforms.Vercel,
+      Skills.frameworks.React,
+      Skills.frameworks.Tailwind,
+      Skills.languages.Typescript,
+      Skills.frameworks.Django,
+      Skills.databases.PostgreSQL,
     ],
   },
   // Arike
@@ -176,12 +167,10 @@ const projects = [
       },
     ],
     tags: [
-      frameworks.Tailwind,
-      frameworks.Django,
-      db.PostgreSQL,
-      db.Redis,
-      platforms.Heroku,
-      platforms.Sentry,
+      Skills.frameworks.Tailwind,
+      Skills.frameworks.Django,
+      Skills.databases.PostgreSQL,
+      Skills.databases.Redis,
     ],
   },
   // Javascript Training
@@ -205,7 +194,12 @@ const projects = [
         url: "https://rithviknishad.github.io/martial-arts/",
       },
     ],
-    tags: [langs.Javascript, langs.HTML, frameworks.Tailwind, api.github],
+    tags: [
+      Skills.languages.Javascript,
+      Skills.languages.HTML,
+      Skills.frameworks.Tailwind,
+      Skills.api.github,
+    ],
   },
   // VITCC Electrical Issues
   {
@@ -223,7 +217,11 @@ const projects = [
         url: "https://vitcc-electrical-issues.web.app",
       },
     ],
-    tags: [langs.Dart, frameworks.Flutter, db.Firestore],
+    tags: [
+      Skills.languages.Dart,
+      Skills.frameworks.Flutter,
+      Skills.databases.Firestore,
+    ],
   },
   // Standalone 3D Position Sensor
   {
@@ -242,7 +240,12 @@ const projects = [
         url: "https://youtu.be/qfzJIBmUK4w",
       },
     ],
-    tags: [iot.ESP01, iot.MQTT, iot.arduinoUno, langs.Cpp],
+    tags: [
+      Skills.iot.ESP01,
+      Skills.iot.MQTT,
+      Skills.iot.arduinoUno,
+      Skills.languages.Cpp,
+    ],
   },
   // AUXPIS BPS
   {
@@ -260,7 +263,12 @@ const projects = [
         url: "https://youtu.be/TsTHe_w3NbI",
       },
     ],
-    tags: [iot.ESP8266, iot.arduinoMini, iot.MQTT, langs.Cpp],
+    tags: [
+      Skills.iot.ESP8266,
+      Skills.iot.arduinoMini,
+      Skills.iot.MQTT,
+      Skills.languages.Cpp,
+    ],
   },
   // Smart Junction
   {
@@ -289,15 +297,15 @@ const projects = [
       },
     ],
     tags: [
-      langs.CSharp,
-      langs.Cpp,
-      iot.arduinoMega,
-      iot.arduinoMicro,
-      iot.arduinoMini,
-      iot.arduinoNano,
-      iot.arduinoUno,
+      Skills.languages.CSharp,
+      Skills.languages.Cpp,
+      Skills.iot.arduinoMega,
+      Skills.iot.arduinoMicro,
+      Skills.iot.arduinoMini,
+      Skills.iot.arduinoNano,
+      Skills.iot.arduinoUno,
     ],
   },
 ];
 
-export default projects;
+export default Projects;
