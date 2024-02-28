@@ -32,7 +32,7 @@ export default function ProjectsSection() {
               className="button-secondary group uppercase"
               onClick={() => setShowAll(true)}
             >
-              <span>View all {projects.length} projects</span>
+              <span>View all {Projects.length} projects</span>
               <BsChevronDown className="button-icon" />
             </button>
           </div>

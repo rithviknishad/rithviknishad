@@ -99,11 +99,11 @@ const About = (about: IAbout) => {
 const AboutCardContent = ({ content }: { content: IAbout }) => {
   const current = content.timeline.includes("now");
   return (
-    <div className="group flex items-start hover:text-zinc-950 lg:p-4 rounded-lg transition-all ease-out text-zinc-400 text-base lg:hover:bg-primary-500">
+    <div className="group flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-400 text-base lg:hover:bg-zinc-900">
       <div className="min-w-fit text-2xl mt-5">{content.icon}</div>
       <div className="flex flex-col pl-3 gap-1">
         <span>
-          <span className="relative inline-flex uppercase text-xs tracking-wider group-hover:font-bold lg:group-hover:text-sm transition-all ease-in-out">
+          <span className="relative inline-flex uppercase text-xs tracking-wider transition-all ease-in-out">
             {content.timeline}
             {current && (
               <span className="flex absolute h-3 w-3 top-1/2 right-0 -mt-1.5 -mr-5 items-center justify-center">
@@ -114,11 +114,11 @@ const AboutCardContent = ({ content }: { content: IAbout }) => {
           </span>
         </span>
         <div className="flex items-center">
-          <span className="font-bold tracking-wide lg:text-xl pr-3 text-white group-hover:text-zinc-950">
+          <span className="font-bold tracking-wide lg:text-xl pr-3 text-white">
             {content.title}
           </span>
           {content.link && (
-            <GoLinkExternal className="text-primary animate-pulse lg:text-xl" />
+            <GoLinkExternal className="text-primary-500 lg:text-xl" />
           )}
         </div>
         {content.subtitle && (
@@ -127,7 +127,7 @@ const AboutCardContent = ({ content }: { content: IAbout }) => {
           </span>
         )}
         {content.description && (
-          <span className="text-zinc-400 group-hover:text-zinc-700 text-sm font-sans">
+          <span className="text-zinc-400 text-sm font-sans">
             {content.description}
           </span>
         )}

@@ -8,10 +8,6 @@
   }
 }
 
-html {
-  scrollbar-color: #eef35f transparent;
-}
-
 .scales {
   -webkit-animation: scales 100s linear 0s infinite;
   animation: scales 100s linear 0s infinite;
@@ -41,18 +37,6 @@ html {
   }
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #64dc0d;
-}
-
 h1 {
   @apply text-6xl lg:text-7xl xl:text-8xl;
 }
@@ -66,11 +50,11 @@ h2 {
 }
 
 .button-primary {
-  @apply button bg-primary-500 text-black border border-primary-500 hover:bg-black hover:text-primary-500 transition-all duration-200 ease-in-out;
+  @apply button bg-transparent text-primary-500 border border-primary-500 hover:bg-black hover:text-primary-500 transition-all duration-200 ease-in-out;
 }
 
 .button-secondary {
-  @apply button text-white hover:text-primary-500 border border-zinc-600 hover:border-primary-500;
+  @apply button text-white border border-zinc-600 hover:border-zinc-400;
 }
 
 .button-icon {

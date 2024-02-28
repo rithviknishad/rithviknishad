@@ -32,7 +32,7 @@ const SkillCard = ({
   skills: ValueOf<typeof Skills>;
 }) => {
   return (
-    <div className="group flex items-start lg:hover:text-white lg:p-4 rounded-lg transition-all ease-out text-zinc-400 text-base lg:hover:bg-opacity-75 lg:hover:outline lg:hover:outline-primary-500">
+    <div className="group flex items-start lg:p-6 rounded-lg lg:rounded-2xl transition-all ease-out text-zinc-400 text-base lg:hover:text-white lg:hover:bg-zinc-900">
       <div className="flex flex-col gap-1">
         <div className="flex justify-between items-center">
           <span className="font-bold tracking-wider lg:text-xl">
@@ -49,7 +49,7 @@ const SkillCard = ({
                 href={skill.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-row items-center gap-2 hover:text-zinc-900 hover:bg-primary-500 w-40 px-2 py-1 transition-all ease-in-out rounded"
+                className="flex flex-row items-center gap-2 hover:text-zinc-900 hover:bg-white w-40 px-2 py-1 transition-all ease-in-out rounded"
               >
                 {skill.icon}
                 <span className="text-xs md:text-base tracking-wide">
