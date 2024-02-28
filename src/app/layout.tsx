@@ -42,11 +42,11 @@ export default function RootLayout({
           <div className="hidden md:block">
             <div className="flex items-center justify-end transition-all 2xl:pr-52">
               {[
-                { label: "Home", href: "#home" },
+                { label: "Home", href: "/#home" },
                 { label: "Life 100", href: "/life-100" },
-                { label: "Projects", href: "#projects" },
-                { label: "Know Me", href: "#skills" },
-                { label: "About", href: "#about" },
+                { label: "Projects", href: "/#projects" },
+                { label: "Know Me", href: "/#skills" },
+                { label: "About", href: "/#about" },
               ].map(({ label, href }) => (
                 <Link
                   href={href}
