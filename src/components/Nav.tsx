@@ -7,7 +7,7 @@ export default function Nav({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const onScroll = () => {
-      setShrinked(window.scrollY > 100);
+      setShrinked(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
