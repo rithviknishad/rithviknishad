@@ -13,11 +13,23 @@ export default async function Page() {
 
   return (
     <main className="bg-zinc-950 font-sans py-40">
-      <div className="mx-auto lg:max-w-7xl px-20 space-y-2">
-        <p className="text-lg">{life100.description}</p>
-        <p className="text-sm text-zinc-400">
-          last updated <Time time={life100.updatedAt} />
-        </p>
+      <div className="grid grid-cols-2 mx-auto lg:max-w-7xl px-20">
+        <div className="space-y-2">
+          <p className="text-lg">{life100.description}</p>
+          <p className="text-sm text-zinc-400">
+            last updated <Time time={life100.updatedAt} />
+          </p>
+        </div>
+
+        <div className="text-end space-y-2">
+          <p className="space-x-4 text-white text-3xl tracking-wider font-bold">
+            {life100.goals.filter((g) => g.status === "Accomplished").length}{" "}
+            <span className="text-zinc-500 px-2 tracking-normal">of</span> 100
+          </p>
+          <p className="text-zinc-400">
+            {life100.goals.length} goals created so far
+          </p>
+        </div>
       </div>
       <ul className="mx-auto lg:max-w-7xl mt-12 space-y-4 px-20">
         {life100.goals.map((goal, index) => {
