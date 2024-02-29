@@ -163,7 +163,7 @@ const Projects = [
       {
         label: "Staging",
         icon: <IoIosRocket />,
-        url: "http://rithviknishad-arike.herokuapp.com/",
+        url: "https://rithviknishad-arike.herokuapp.com/",
       },
     ],
     tags: [
