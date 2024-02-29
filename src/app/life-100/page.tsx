@@ -1,18 +1,23 @@
 import GoalUpdates from "@/app/life-100/GoalUpdates";
 import { getLife100Data } from "@/app/life-100/functions";
 import Markdown from "@/components/Markdown";
+import Time from "@/components/Time";
 import Link from "next/link";
 import { AiOutlineLoading } from "react-icons/ai";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
-import { MdOutlineViewTimeline } from "react-icons/md";
+
+export const revalidate = 1800;
 
 export default async function Page() {
   const life100 = await getLife100Data();
 
   return (
-    <main className="bg-zinc-900 font-sans py-40">
-      <div className="mx-auto lg:max-w-7xl px-20">
-        <span className="text-lg">{life100.description}</span>
+    <main className="bg-zinc-950 font-sans py-40">
+      <div className="mx-auto lg:max-w-7xl px-20 space-y-2">
+        <p className="text-lg">{life100.description}</p>
+        <p className="text-sm text-zinc-400">
+          last updated <Time time={life100.updatedAt} />
+        </p>
       </div>
       <ul className="mx-auto lg:max-w-7xl mt-12 space-y-4 px-20">
         {life100.goals.map((goal, index) => {
@@ -22,7 +27,7 @@ export default async function Page() {
             <li
               key={goal.id}
               id={elementId}
-              className="group bg-zinc-950 bg-opacity-50 backdrop-blur-md hover:bg-opacity-100 border border-zinc-800 hover:border-primary-900 p-8 flex flex-col gap-6 transition-all duration-200 ease-in-out"
+              className="group bg-zinc-900 bg-opacity-50 backdrop-blur-md hover:bg-opacity-100 border border-zinc-800 hover:border-primary-700 p-8 flex flex-col gap-6 transition-all duration-200 ease-in-out"
             >
               <p className="inline-flex items-center gap-4">
                 <span className="text-zinc-500 group-hover:text-zinc-200 font-bold tracking-wider text-lg transition-all duration-200 ease-in-out font-manrope">
@@ -50,9 +55,9 @@ export default async function Page() {
 
                 {goal.accomplishedOn && (
                   <span className="text-sm px-2.5 py-0.5 text-zinc-400">
-                    Accomplished on
+                    Accomplished
                     <span className="pl-2 text-zinc-300 tracking-wider font-medium">
-                      {goal.accomplishedOn}
+                      <Time time={goal.accomplishedOn} />
                     </span>
                   </span>
                 )}
@@ -85,13 +90,7 @@ export default async function Page() {
                 <Markdown>{goal.description || "_No description_"}</Markdown>
               </article>
 
-              {goal.comments.length ? (
-                <GoalUpdates goal={goal} />
-              ) : (
-                <span className="cursor-pointer inline-flex items-center gap-2 text-zinc-400">
-                  <MdOutlineViewTimeline /> No updates
-                </span>
-              )}
+              {!!goal.comments.length && <GoalUpdates goal={goal} />}
             </li>
           );
         })}
