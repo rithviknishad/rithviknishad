@@ -15,14 +15,14 @@ export default function GoalUpdates({
 
   return (
     <>
-      <span
+      <button
         className="cursor-pointer underline inline-flex items-center gap-2 text-zinc-400"
         onClick={() => setShow((v) => !v)}
       >
         <MdOutlineViewTimeline /> {show ? "Hide" : "Show"}{" "}
         {goal.comments.length} updates
-      </span>
-      {show && goal.comments.length && (
+      </button>
+      {show && (
         <ul className="-mb-8 flow-root" role="list">
           {goal.comments.map((comment, idx) => (
             <li key={comment.createdAt}>
@@ -55,7 +55,7 @@ export default function GoalUpdates({
                       </div>
                     </div>
                     <div className="mt-2 text-sm text-zinc-100">
-                      <article className="p-8 bg-zinc-900 rounded-xl max-h-96 overflow-auto">
+                      <article className="my-4 p-6 bg-zinc-900 border border-zinc-700 rounded-xl max-h-96 overflow-auto">
                         <Suspense fallback="loading">
                           <Markdown>{comment.body}</Markdown>
                         </Suspense>
