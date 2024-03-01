@@ -19,9 +19,6 @@ export default function GoalUpdates({
         className="cursor-pointer underline underline-offset-2 inline-flex items-center gap-2 text-zinc-400 text-sm lg:text-base"
         onClick={() => setShow((v) => !v)}
       >
-        <div className="hidden lg:block">
-          <MdOutlineViewTimeline /> {show ? "Hide" : "Show"}{" "}
-        </div>
         Click to see {goal.comments.length} updates
       </button>
       {show && (
