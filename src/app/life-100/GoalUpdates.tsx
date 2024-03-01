@@ -16,11 +16,13 @@ export default function GoalUpdates({
   return (
     <>
       <button
-        className="cursor-pointer underline inline-flex items-center gap-2 text-zinc-400"
+        className="cursor-pointer underline underline-offset-2 inline-flex items-center gap-2 text-zinc-400 text-sm lg:text-base"
         onClick={() => setShow((v) => !v)}
       >
-        <MdOutlineViewTimeline /> {show ? "Hide" : "Show"}{" "}
-        {goal.comments.length} updates
+        <div className="hidden lg:block">
+          <MdOutlineViewTimeline /> {show ? "Hide" : "Show"}{" "}
+        </div>
+        Click to see {goal.comments.length} updates
       </button>
       {show && (
         <ul className="-mb-8 flow-root" role="list">
