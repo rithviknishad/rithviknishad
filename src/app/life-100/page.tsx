@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AiOutlineLoading } from "react-icons/ai";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 
-export const revalidate = 1800;
+export const revalidate = 0;
 
 export default async function Page() {
   const life100 = await getLife100Data();
