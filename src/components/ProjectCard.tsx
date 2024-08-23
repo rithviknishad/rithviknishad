@@ -47,7 +47,10 @@ export default function ProjectCard({
             )}
           </span>
           <div className="flex gap-4 items-center ml-1.5">
-            {[repositoryLink, ...project.otherLinks].map((link, index) => {
+            {(project.repository
+              ? [repositoryLink, ...project.otherLinks]
+              : project.otherLinks
+            ).map((link, index) => {
               return (
                 <Link
                   key={link.url}

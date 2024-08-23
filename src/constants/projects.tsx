@@ -9,7 +9,8 @@ import { SiGitbook } from "react-icons/si";
 
 import ArikeBG from "@public/images/project-bg/Arike.png";
 import BuckBoostBG from "@public/images/project-bg/BuckBoostConverter.jpg";
-import CoronasafeBG from "@public/images/project-bg/Coronasafe.jpg";
+import OHCNetworkBG from "@public/images/project-bg/OHCNetworkBg.png";
+import LeaderboardBG from "@public/images/project-bg/Leaderboard.png";
 import IoTBasedPSBG from "@public/images/project-bg/IoTBasedPS.png";
 import MartialArtsBG from "@public/images/project-bg/MartialArts.png";
 import OsumPiBG from "@public/images/project-bg/osumpi.png";
@@ -31,21 +32,21 @@ const Projects = [
       "Our goal is to accelerate the adoption of renewable energy sources and decentralized energy generation while ensuring maximum uptime and reliability.",
     repository: "https://github.com/vaidyuti/",
     otherLinks: [
-      {
-        label: "Deployment",
-        icon: <IoIosRocket />,
-        url: "https://get.vaidyuti.in/",
-      },
-      {
-        label: "API",
-        icon: <IoIosRocket />,
-        url: "https://api.vaidyuti.in/",
-      },
-      {
-        label: "API Docs",
-        icon: <SiGitbook />,
-        url: "https://api.vaidyuti.in/swagger/",
-      },
+      // {
+      //   label: "Deployment",
+      //   icon: <IoIosRocket />,
+      //   url: "https://get.vaidyuti.in/",
+      // },
+      // {
+      //   label: "API",
+      //   icon: <IoIosRocket />,
+      //   url: "https://api.vaidyuti.in/",
+      // },
+      // {
+      //   label: "API Docs",
+      //   icon: <SiGitbook />,
+      //   url: "https://api.vaidyuti.in/swagger/",
+      // },
     ],
     tags: [
       Skills.frameworks.Django,
@@ -53,23 +54,18 @@ const Projects = [
       Skills.tools.EMQX,
       Skills.databases.InfluxDB,
       Skills.databases.PostgreSQL,
-      Skills.databases.PlanetScale,
       Skills.tools.Telegraf,
-      Skills.databases.Redis,
-      Skills.api.solcast,
-      Skills.tools.Docker,
     ],
   },
   // CARE
   {
     title:
       "CARE - Our Goal is to defend the Healthcare system from overloading beyond capacity.",
-    image: CoronasafeBG,
-    link: "https://github.com/coronasafe/",
+    image: OHCNetworkBG,
+    link: "https://github.com/ohcnetwork",
     timeline: "May `22 - now",
     description:
       "Care is a Digital Public Good enabling TeleICU & Decentralised Administration of Healthcare Capacity across States.",
-    repository: "https://github.com/coronasafe/care_fe",
     otherLinks: [
       {
         label: "Open Healthcare Network",
@@ -81,8 +77,27 @@ const Projects = [
       Skills.frameworks.Django,
       Skills.frameworks.React,
       Skills.frameworks.Tailwind,
-      Skills.languages.Typescript,
-      Skills.languages.Python,
+    ],
+  },
+  // Leaderboard
+  {
+    title: "Leaderboard",
+    image: LeaderboardBG,
+    link: "https://github.com/ohcnetwork/leaderboard",
+    timeline: "May `22 - now",
+    description:
+      "Collects data from GitHub and Slack to show off the work of open source contributors for organisations.",
+    otherLinks: [
+      {
+        label: "ohc.network",
+        icon: <IoIosRocket />,
+        url: "https://rithviknishad-swiftly.netlify.app/",
+      },
+    ],
+    tags: [
+      Skills.frameworks.NextJS,
+      Skills.frameworks.Tailwind,
+      Skills.api.github,
     ],
   },
   // IoT based Push-Pull converter

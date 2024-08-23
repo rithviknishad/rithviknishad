@@ -20,18 +20,20 @@ export default function AboutSection() {
             <li>
               <About
                 title="Software Engineer"
-                subtitle="eGovernments Foundation"
-                description="Deputed to develop the Tele-ICU tooling for 10bedICU project."
+                subtitle="Open Healthcare Network"
+                description="Deputed to eGovernments Foundation to develop the Tele-ICU tooling for 10bedICU project."
                 timeline="May `23 - now"
+                link="https://github.com/ohcnetwork"
                 icon={<BiCode />}
               />
             </li>
             <li>
               <About
                 title="National Software Engineering Fellow (GDC Intern)"
-                subtitle="eGovernments Foundation & Pupilfirst Private Limited"
+                subtitle="Open Healthcare Network"
                 description="Deputed to eGovernments Foundation to develop the Tele-ICU tooling for 10bedICU project."
                 timeline="May `22 - April `23"
+                link="https://github.com/ohcnetwork"
                 icon={<BiCode />}
               />
             </li>
@@ -39,7 +41,7 @@ export default function AboutSection() {
               <About
                 title="B. Tech. Electrical & Electronics Engineering"
                 subtitle="Vellore Institute of Technology"
-                description="Deputed to develop the Tele-ICU tooling for 10bedICU project."
+                description="Well COVID happened... So nothing much to say..."
                 timeline="July `19 - April `23"
                 icon={<FaGraduationCap />}
               />
