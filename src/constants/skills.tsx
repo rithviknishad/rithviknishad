@@ -1,5 +1,6 @@
 import {
   SiArduino,
+  SiCloudflarepages,
   SiCplusplus,
   SiCsharp,
   SiDart,
@@ -7,6 +8,7 @@ import {
   SiDjango,
   SiDocker,
   SiEspressif,
+  SiExcalidraw,
   SiFirebase,
   SiFlutter,
   SiGnubash,
@@ -23,9 +25,11 @@ import {
   SiRaspberrypi,
   SiReact,
   SiRedis,
+  SiShadcnui,
   SiStmicroelectronics,
   SiTailwindcss,
   SiTypescript,
+  SiVite,
 } from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 import { FaSimCard } from "react-icons/fa";
@@ -94,6 +98,11 @@ const frameworks = {
     name: "NextJS",
     icon: <SiNextdotjs />,
     href: "https://youtu.be/Sklc_fQBmcs",
+  },
+  Vite: {
+    name: "Vite",
+    icon: <SiVite />,
+    href: "https://vitejs.dev/",
   },
   Django: {
     name: "Django REST",
@@ -226,6 +235,21 @@ const iot = {
 };
 
 const tools = {
+  Excalidraw: {
+    name: "Excalidraw",
+    icon: <SiExcalidraw />,
+    href: "https://excalidraw.com",
+  },
+  CloudflarePages: {
+    name: "Cloudflare Pages",
+    icon: <SiCloudflarepages />,
+    href: "https://pages.cloudflare.com/",
+  },
+  Shadcn: {
+    name: "shadcn/ui",
+    icon: <SiShadcnui />,
+    href: "https://ui.shadcn.com/",
+  },
   Docker: {
     name: "Docker",
     icon: <SiDocker />,

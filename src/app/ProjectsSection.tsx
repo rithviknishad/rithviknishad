@@ -7,7 +7,7 @@ import { BsChevronDown } from "react-icons/bs";
 
 export default function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
-  const projects = showAll ? Projects : Projects.slice(0, 4);
+  const projects = showAll ? Projects : Projects.slice(0, 7);
 
   return (
     <section id="projects" className="bg-zinc-950 py-24 px-8">

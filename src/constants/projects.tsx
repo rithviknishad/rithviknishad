@@ -1,4 +1,4 @@
-import { BsYoutube } from "react-icons/bs";
+import { BsGithub, BsYoutube } from "react-icons/bs";
 import { CgOrganisation } from "react-icons/cg";
 import {
   IoIosRocket,
@@ -9,7 +9,9 @@ import { SiGitbook } from "react-icons/si";
 
 import ArikeBG from "@public/images/project-bg/Arike.png";
 import BuckBoostBG from "@public/images/project-bg/BuckBoostConverter.jpg";
-import OHCNetworkBG from "@public/images/project-bg/OHCNetworkBg.png";
+import DrawBG from "@public/images/project-bg/Draw.png";
+import CareBG from "@public/images/project-bg/Care.png";
+import JSONSchemaValidatorBG from "@public/images/project-bg/JSONSchemValidator.png";
 import LeaderboardBG from "@public/images/project-bg/Leaderboard.png";
 import IoTBasedPSBG from "@public/images/project-bg/IoTBasedPS.png";
 import MartialArtsBG from "@public/images/project-bg/MartialArts.png";
@@ -31,23 +33,7 @@ const Projects = [
     description:
       "Our goal is to accelerate the adoption of renewable energy sources and decentralized energy generation while ensuring maximum uptime and reliability.",
     repository: "https://github.com/vaidyuti/",
-    otherLinks: [
-      // {
-      //   label: "Deployment",
-      //   icon: <IoIosRocket />,
-      //   url: "https://get.vaidyuti.in/",
-      // },
-      // {
-      //   label: "API",
-      //   icon: <IoIosRocket />,
-      //   url: "https://api.vaidyuti.in/",
-      // },
-      // {
-      //   label: "API Docs",
-      //   icon: <SiGitbook />,
-      //   url: "https://api.vaidyuti.in/swagger/",
-      // },
-    ],
+    otherLinks: [],
     tags: [
       Skills.frameworks.Django,
       Skills.iot.ESP32,
@@ -59,9 +45,8 @@ const Projects = [
   },
   // CARE
   {
-    title:
-      "CARE - Our Goal is to defend the Healthcare system from overloading beyond capacity.",
-    image: OHCNetworkBG,
+    title: "Care",
+    image: CareBG,
     link: "https://github.com/ohcnetwork",
     timeline: "May `22 - now",
     description:
@@ -83,21 +68,49 @@ const Projects = [
   {
     title: "Leaderboard",
     image: LeaderboardBG,
-    link: "https://github.com/ohcnetwork/leaderboard",
+    link: "https://contributors.ohc.network",
     timeline: "May `22 - now",
     description:
       "Collects data from GitHub and Slack to show off the work of open source contributors for organisations.",
-    otherLinks: [
-      {
-        label: "ohc.network",
-        icon: <IoIosRocket />,
-        url: "https://rithviknishad-swiftly.netlify.app/",
-      },
-    ],
+    repository: "https://github.com/ohcnetwork/leaderboard",
+    otherLinks: [],
     tags: [
       Skills.frameworks.NextJS,
       Skills.frameworks.Tailwind,
       Skills.api.github,
+    ],
+  },
+  // draw.rithviknishad.dev
+  {
+    title: "Draw",
+    image: DrawBG,
+    link: "https://draw.rithviknishad.dev",
+    timeline: "Sep `24",
+    description: "Excalidraw with multi-board support",
+    repository: "https://github.com/rithviknishad/draw",
+    otherLinks: [],
+    tags: [
+      Skills.frameworks.Vite,
+      Skills.frameworks.Tailwind,
+      Skills.tools.Shadcn,
+      Skills.tools.Excalidraw,
+      Skills.tools.CloudflarePages,
+    ],
+  },
+  // JSON Schema Validator
+  {
+    title: "JSON Schema Validator",
+    image: JSONSchemaValidatorBG,
+    link: "https://json-schema-validator.rithviknishad.dev",
+    timeline: "Sep `24",
+    description: "Validator tool to validate JSON Schema validations",
+    repository: "https://github.com/rithviknishad/json-schema-validator",
+    otherLinks: [],
+    tags: [
+      Skills.frameworks.Vite,
+      Skills.frameworks.Tailwind,
+      Skills.tools.Shadcn,
+      Skills.tools.CloudflarePages,
     ],
   },
   // IoT based Push-Pull converter
