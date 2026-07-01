@@ -1,0 +1,50 @@
+---
+// Analog 3-position rotary theme selector: system / light / dark. Cockpit vibe.
+---
+<div class="flex items-center gap-2 text-[10px] text-muted">
+  <button
+    id="knob"
+    type="button"
+    aria-label="Theme selector"
+    title="Theme: system / light / dark"
+    class="relative w-9 h-9 rounded-full border border-[--color-line] bg-panel shadow-inner flex items-center justify-center hover:border-sage-500"
+  >
+    <!-- detent ticks -->
+    <span class="absolute -top-2 text-[7px] left-0">L</span>
+    <span class="absolute -top-2 text-[7px] right-0">D</span>
+    <span class="absolute -top-3 text-[7px] left-1/2 -translate-x-1/2">SYS</span>
+    <svg viewBox="0 0 40 40" class="w-7 h-7" id="knob-dial" style="transition:transform .25s cubic-bezier(.5,1.6,.5,1)">
+      <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-line)" stroke-width="2" />
+      <circle cx="20" cy="20" r="13" fill="none" stroke="var(--color-sage-500)" stroke-width="1" opacity="0.5" />
+      <line x1="20" y1="20" x2="20" y2="6" stroke="var(--color-copper)" stroke-width="2.5" stroke-linecap="round" />
+      <circle cx="20" cy="20" r="3" fill="var(--color-sage-300)" />
+    </svg>
+  </button>
+  <span id="knob-label" class="w-9 text-sage-300">sys</span>
+</div>
+<script>
+  const modes = ["system", "light", "dark"] as const;
+  type Mode = (typeof modes)[number];
+  const angles: Record<Mode, number> = { system: 0, light: -38, dark: 38 };
+  const labels: Record<Mode, string> = { system: "sys", light: "light", dark: "dark" };
+  const dial = document.getElementById("knob-dial")!;
+  const label = document.getElementById("knob-label")!;
+  const knob = document.getElementById("knob")!;
+
+  function resolve(m: Mode) {
+    return m === "system"
+      ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+      : m;
+  }
+  function apply(m: Mode) {
+    document.documentElement.dataset.theme = resolve(m);
+    dial.style.transform = `rotate(${angles[m]}deg)`;
+    label.textContent = labels[m];
+    localStorage.setItem("theme", m);
+    dispatchEvent(new CustomEvent("themechange"));
+  }
+  let mode = (localStorage.getItem("theme") as Mode) || "system";
+  apply(mode);
+  knob.addEventListener("click", () => { mode = modes[(modes.indexOf(mode) + 1) % 3]; apply(mode); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (mode === "system") apply("system"); });
+</script>

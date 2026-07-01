@@ -1,0 +1,74 @@
+---
+// Site-wide Node Mesh background + custom node cursor.
+---
+<canvas id="mesh-bg" class="fixed inset-0 -z-10 w-full h-full"></canvas>
+<script>
+  const cv = document.getElementById("mesh-bg") as HTMLCanvasElement;
+  const ctx = cv.getContext("2d")!;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let w = 0, h = 0;
+  let mx = -9999, my = -9999, inside = false;
+  const fine = matchMedia("(pointer: fine)").matches;
+
+  const cssVars = { sage: "#9caf88", trace: "#5f774f", copper: "#c98a4b" };
+  function readTheme() {
+    const s = getComputedStyle(document.documentElement);
+    cssVars.sage = s.getPropertyValue("--color-sage-300").trim() || cssVars.sage;
+    cssVars.trace = s.getPropertyValue("--color-sage-500").trim() || cssVars.trace;
+    cssVars.copper = s.getPropertyValue("--color-copper").trim() || cssVars.copper;
+  }
+  readTheme();
+  addEventListener("themechange", readTheme);
+
+  type N = { x: number; y: number; vx: number; vy: number };
+  let nodes: N[] = [];
+
+  function seed() {
+    const count = Math.round((w * h) / (26000 * dpr));
+    nodes = Array.from({ length: Math.max(24, Math.min(110, count)) }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.18 * dpr,
+      vy: (Math.random() - 0.5) * 0.18 * dpr,
+    }));
+  }
+  function resize() {
+    w = cv.width = innerWidth * dpr;
+    h = cv.height = innerHeight * dpr;
+    seed();
+  }
+  resize();
+  addEventListener("resize", resize);
+  addEventListener("pointermove", (e) => { mx = e.clientX * dpr; my = e.clientY * dpr; inside = true; });
+  addEventListener("pointerleave", () => { inside = false; mx = my = -9999; });
+
+  const LINK = 130 * dpr, NEAR = 150 * dpr;
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > w) n.vx *= -1;
+      if (n.y < 0 || n.y > h) n.vy *= -1;
+    }
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < LINK) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.strokeStyle = cssVars.trace; ctx.globalAlpha = 0.18 * (1 - d / LINK); ctx.lineWidth = dpr; ctx.stroke(); }
+      }
+    }
+    ctx.globalAlpha = 1;
+    for (const n of nodes) {
+      const near = inside && Math.hypot(n.x - mx, n.y - my) < NEAR;
+      if (near) { ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(mx, my); ctx.strokeStyle = cssVars.sage + "55"; ctx.lineWidth = dpr; ctx.stroke(); }
+      ctx.beginPath(); ctx.arc(n.x, n.y, (near ? 2.6 : 1.8) * dpr, 0, 7); ctx.fillStyle = near ? cssVars.copper : cssVars.sage; ctx.globalAlpha = near ? 0.95 : 0.6; ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    if (inside && fine) {
+      ctx.beginPath(); ctx.arc(mx, my, 4.5 * dpr, 0, 7); ctx.fillStyle = cssVars.copper; ctx.fill();
+      ctx.beginPath(); ctx.arc(mx, my, 11 * dpr, 0, 7); ctx.strokeStyle = cssVars.copper; ctx.globalAlpha = 0.5; ctx.lineWidth = dpr; ctx.stroke(); ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+</script>

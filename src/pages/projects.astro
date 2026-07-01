@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import CircuitDivider from "../components/CircuitDivider.astro";
+import { projects } from "../data/projects";
+---
+<Base title="projects" description="Projects by Rithvik Nishad.">
+  <h1 class="text-2xl font-bold text-sage-100">// projects</h1>
+  <CircuitDivider />
+  <div class="grid sm:grid-cols-2 gap-4">
+    {projects.map((p) => (
+      <a href={p.link} target="_blank" rel="noopener" class="block border border-[--color-line] bg-panel p-5 hover:border-sage-500 group">
+        <h2 class="text-sage-200 group-hover:text-sage-300">{p.title}</h2>
+        <p class="text-muted text-sm mt-2">{p.blurb}</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          {p.tags.map((t) => (
+            <span class="text-xs text-copper border border-[--color-line] px-2 py-0.5">{t}</span>
+          ))}
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>

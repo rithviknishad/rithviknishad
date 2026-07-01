@@ -1,0 +1,15 @@
+---
+import { site } from "../data/site";
+const year = new Date().getFullYear();
+---
+<footer class="relative z-10 border-t border-[--color-line] mt-16">
+  <div class="max-w-3xl mx-auto px-5 py-6 flex flex-wrap gap-4 justify-between text-xs text-muted">
+    <span>© {year} {site.name} — built with code + copper.</span>
+    <div class="flex gap-4">
+      <a href={site.links.github} class="hover:text-sage-300">github</a>
+      <a href={site.links.linkedin} class="hover:text-sage-300">linkedin</a>
+      <a href={site.links.youtube} class="hover:text-sage-300">youtube</a>
+      <a href={site.links.x} class="hover:text-sage-300">x</a>
+    </div>
+  </div>
+</footer>

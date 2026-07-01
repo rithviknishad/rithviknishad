@@ -1,0 +1,47 @@
+---
+// Royal Enfield Classic 350 — stylized side profile. Two wheels grouped for
+// scroll-spin. Sage body, copper accents. ~200x110 canvas.
+---
+<svg id="bike" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <style>[data-wheel] { transform-box: fill-box; transform-origin: center; }</style>
+  <!-- exhaust -->
+  <path d="M118 78 H180 q6 0 6 4 t-6 4 H150" stroke="var(--color-copper)" stroke-width="4" stroke-linecap="round" />
+  <!-- mudguards -->
+  <path d="M18 70 a30 30 0 0 1 56 -6" stroke="var(--color-sage-400)" stroke-width="3" />
+  <path d="M126 64 a30 30 0 0 1 56 6" stroke="var(--color-sage-400)" stroke-width="3" />
+
+  <!-- rear wheel -->
+  <g class="wheel" data-wheel>
+    <circle cx="46" cy="80" r="24" stroke="var(--color-sage-300)" stroke-width="3.5" />
+    <circle cx="46" cy="80" r="24" stroke="var(--color-sage-600)" stroke-width="9" opacity="0.18" />
+    <circle cx="46" cy="80" r="6" fill="var(--color-sage-500)" />
+    <g stroke="var(--color-sage-500)" stroke-width="1.3">
+      <line x1="46" y1="56" x2="46" y2="104" /><line x1="22" y1="80" x2="70" y2="80" />
+      <line x1="29" y1="63" x2="63" y2="97" /><line x1="63" y1="63" x2="29" y2="97" />
+    </g>
+  </g>
+  <!-- front wheel -->
+  <g class="wheel" data-wheel>
+    <circle cx="154" cy="80" r="24" stroke="var(--color-sage-300)" stroke-width="3.5" />
+    <circle cx="154" cy="80" r="24" stroke="var(--color-sage-600)" stroke-width="9" opacity="0.18" />
+    <circle cx="154" cy="80" r="6" fill="var(--color-sage-500)" />
+    <g stroke="var(--color-sage-500)" stroke-width="1.3">
+      <line x1="154" y1="56" x2="154" y2="104" /><line x1="130" y1="80" x2="178" y2="80" />
+      <line x1="137" y1="63" x2="171" y2="97" /><line x1="171" y1="63" x2="137" y2="97" />
+    </g>
+  </g>
+
+  <!-- engine block -->
+  <rect x="78" y="64" width="26" height="20" rx="3" fill="var(--color-sage-600)" stroke="var(--color-sage-400)" stroke-width="1.5" />
+  <!-- frame -->
+  <path d="M46 80 L86 80 L96 54 L132 54 L154 80" stroke="var(--color-sage-400)" stroke-width="3.5" stroke-linejoin="round" />
+  <!-- teardrop tank -->
+  <path d="M88 56 q22 -16 44 -2 q2 10 -8 16 H94 q-8 -6 -6 -14 z" fill="var(--color-sage-500)" stroke="var(--color-copper)" stroke-width="1.5" />
+  <!-- seat -->
+  <path d="M62 54 q22 -6 30 0 l-2 6 H64 z" fill="var(--color-sage-300)" />
+  <!-- fork + handlebar -->
+  <line x1="132" y1="54" x2="150" y2="78" stroke="var(--color-sage-400)" stroke-width="3" />
+  <path d="M132 54 l12 -10 8 2" stroke="var(--color-sage-400)" stroke-width="3" stroke-linecap="round" />
+  <!-- headlight -->
+  <circle cx="150" cy="48" r="6" fill="var(--color-copper)" />
+</svg>

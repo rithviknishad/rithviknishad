@@ -1,0 +1,23 @@
+---
+import { nav, site } from "../data/site";
+import ThemeKnob from "./ThemeKnob.astro";
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
+---
+<header class="relative z-10 border-b border-[--color-line]">
+  <nav class="max-w-3xl mx-auto px-5 py-4 flex items-center justify-between text-sm">
+    <a href="/" class="text-sage-300 font-bold tracking-tight">~/rithvik<span class="cursor"></span></a>
+    <ul class="flex gap-4 items-center">
+      {nav.filter(n => n.href !== "/").map((n) => (
+        <li>
+          <a
+            href={n.href}
+            class:list={["hover:text-sage-300", isActive(n.href) ? "text-sage-300" : "text-muted"]}
+          >{n.label}</a>
+        </li>
+      ))}
+      <li><ThemeKnob /></li>
+    </ul>
+  </nav>
+</header>

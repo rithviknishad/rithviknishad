@@ -1,0 +1,29 @@
+---
+// Schematic divider: wire -> resistor (zigzag) -> capacitor, with pulses
+// of signal traveling along the wire. Sage trace, copper pulse.
+const wire =
+  "M0 12 H56 L62 5 L74 19 L86 5 L98 19 L110 5 L116 12 H150 M166 12 H240";
+const pulseDur = 4;
+---
+<div class="relative w-full my-8 select-none" aria-hidden="true">
+  <svg class="w-full h-7" viewBox="0 0 240 24" fill="none" preserveAspectRatio="xMidYMid meet">
+    <!-- wire + resistor + cap leads -->
+    <path d={wire} stroke="var(--color-sage-500)" stroke-width="1.4" stroke-linecap="round" />
+    <!-- capacitor plates -->
+    <line x1="150" y1="3" x2="150" y2="21" stroke="var(--color-sage-400)" stroke-width="1.6" />
+    <line x1="166" y1="3" x2="166" y2="21" stroke="var(--color-sage-400)" stroke-width="1.6" />
+    <!-- end pads -->
+    <circle cx="2" cy="12" r="2.6" fill="var(--color-sage-500)" />
+    <circle cx="238" cy="12" r="2.6" fill="var(--color-sage-500)" />
+    <!-- labels -->
+    <text x="89" y="2" text-anchor="middle" fill="var(--color-muted)" font-size="5" font-family="monospace">R</text>
+    <text x="158" y="2" text-anchor="middle" fill="var(--color-muted)" font-size="5" font-family="monospace">C</text>
+    <!-- traveling signal pulses -->
+    {[0, 0.5].map((delay) => (
+      <circle r="2.6" fill="var(--color-copper)">
+        <animateMotion dur={`${pulseDur}s`} begin={`${delay * pulseDur}s`} repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear" path={wire} />
+        <animate attributeName="opacity" values="0;1;1;0;0" dur={`${pulseDur}s`} begin={`${delay * pulseDur}s`} repeatCount="indefinite" />
+      </circle>
+    ))}
+  </svg>
+</div>

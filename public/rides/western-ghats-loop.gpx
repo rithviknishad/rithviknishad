@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="rithviknishad" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Western Ghats Loop</name>
+    <trkseg>
+      <trkpt lat="11.0168" lon="76.9558"></trkpt>
+      <trkpt lat="11.1100" lon="76.9500"></trkpt>
+      <trkpt lat="11.2997" lon="76.9376"></trkpt>
+      <trkpt lat="11.3200" lon="76.8800"></trkpt>
+      <trkpt lat="11.3531" lon="76.7959"></trkpt>
+      <trkpt lat="11.3800" lon="76.7400"></trkpt>
+      <trkpt lat="11.4064" lon="76.6932"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,47 @@
+---
+import Base from "../layouts/Base.astro";
+import CircuitDivider from "../components/CircuitDivider.astro";
+import { site } from "../data/site";
+---
+<Base>
+  <section class="flex flex-col-reverse sm:flex-row sm:items-center gap-8">
+    <div class="space-y-6 flex-1">
+      <p class="text-muted text-sm">$ whoami</p>
+      <h1 class="text-3xl sm:text-5xl font-bold text-sage-100 leading-tight">
+        {site.name}
+      </h1>
+      <p class="text-sage-300 text-lg">{site.role}</p>
+      <p class="text-muted max-w-xl">{site.blurb}</p>
+
+      <div class="flex flex-wrap gap-3 pt-2 text-sm">
+        <a href="/projects" class="border border-sage-500 text-sage-200 px-4 py-2 hover:bg-sage-600/30">view projects →</a>
+        <a href="/life-100" class="border border-[--color-line] text-muted px-4 py-2 hover:text-sage-300 hover:border-sage-500">life-100 checklist</a>
+      </div>
+    </div>
+
+    <div class="relative shrink-0 mx-auto sm:mx-0 w-44 h-44 sm:w-52 sm:h-52">
+      <div class="relative shrink-0 mx-auto sm:mx-0">
+        <img src="/rithvik-dark.png" alt={site.name} width="220" height="220" class="portrait-dark w-40 sm:w-52 h-auto" />
+        <img src="/rithvik-light.png" alt={site.name} width="220" height="220" class="portrait-light w-40 sm:w-52 h-auto" />
+      </div>
+    </div>
+  </section>
+
+  <CircuitDivider />
+
+  <section class="grid sm:grid-cols-3 gap-4 text-sm">
+    <a href="https://ohc.network" target="_blank" rel="noopener" class="relative block border border-[--color-line] p-4 bg-panel hover:border-sage-500 group">
+      <p class="text-sage-300">// software</p>
+      <p class="text-muted mt-1 group-hover:text-sage-300">Day job: engineering at Open Healthcare Network. →</p>
+      <img src="/ohc-logo.svg" alt="Open Healthcare Network" width="28" height="24" class="absolute bottom-3 right-3 w-7 opacity-60 group-hover:opacity-100 transition-opacity" />
+    </a>
+    <div class="border border-[--color-line] p-4 bg-panel">
+      <p class="text-sage-300">// hardware</p>
+      <p class="text-muted mt-1">ESP32, microcontrollers on weekends.</p>
+    </div>
+    <div class="border border-[--color-line] p-4 bg-panel">
+      <p class="text-sage-300">// always</p>
+      <p class="text-muted mt-1">Tinkering, learning, soldering something new.</p>
+    </div>
+  </section>
+</Base>

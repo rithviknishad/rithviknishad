@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import CircuitDivider from "../components/CircuitDivider.astro";
+import { site } from "../data/site";
+---
+<Base title="contact" description="Get in touch with Rithvik Nishad.">
+  <h1 class="text-2xl font-bold text-sage-100">// contact</h1>
+  <CircuitDivider />
+  <p class="text-muted mb-6">Find me across the wire:</p>
+  <ul class="space-y-3">
+    <li class="solder pl-1"><a class="text-sage-200 hover:text-sage-300" href={site.links.github}>github.com/rithviknishad</a></li>
+    <li class="solder pl-1"><a class="text-sage-200 hover:text-sage-300" href={site.links.linkedin}>linkedin.com/in/rithviknishad</a></li>
+    <li class="solder pl-1"><a class="text-sage-200 hover:text-sage-300" href={site.links.youtube}>youtube.com/@rithviknishad</a></li>
+    <li class="solder pl-1"><a class="text-sage-200 hover:text-sage-300" href={site.links.x}>x.com/rithviknishad</a></li>
+  </ul>
+</Base>
