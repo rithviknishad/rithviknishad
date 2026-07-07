@@ -53,5 +53,6 @@ export const life100: LifeItem[] = [
   { id: 17, text: "Design and build a container house" },
   { id: 18, text: "Ride Japan's fastest maglev at full tilt" },
   { id: 19, text: "Explore Japan end to end" },
+  { id: 20, text: "Stand beneath a thousand falling embers at Nakhwa Nori" },
   // ... keep adding up to 100. Keep ids unique.
 ];
