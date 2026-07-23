@@ -7,6 +7,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "onvif-console",
+    blurb:
+      "ONVIF PTZ camera testing console with live view and conformance reports",
+    tags: ["next.js", "fastapi", "onvif", "webrtc"],
+    link: "https://github.com/10bedicu/onvif-console",
+  },
+  {
     title: "vaidyuti",
     blurb:
       "Accelerating the decentralization of renewable energy — power by the people, for the people, of the people.",
