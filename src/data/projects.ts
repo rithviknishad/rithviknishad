@@ -7,6 +7,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "settle-up-mcp",
+    blurb:
+      "An MCP server that hands an AI agent 26 tools to read and write Settle Up groups, expenses, balances, and recurring transactions.",
+    tags: ["mcp", "python", "fastmcp", "docker"],
+    link: "https://github.com/rithviknishad/settle-up-mcp",
+  },
+  {
     title: "onvif-console",
     blurb:
       "ONVIF PTZ camera testing console with live view and conformance reports",
